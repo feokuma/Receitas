@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receitas.Android", "fontes\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receitas.iOS", "fontes\Receitas.iOS\Receitas.iOS.csproj", "{90A566F9-8415-4756-B2DD-906CBC2DE8D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receitas", "fontes\Receitas.Compartilhado\Receitas.csproj", "{BD3278AF-4BB1-458F-B50C-FEBC461E7047}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receitas", "fontes\Receitas\Receitas.csproj", "{BD3278AF-4BB1-458F-B50C-FEBC461E7047}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "fontes", "fontes", "{1785E5CC-B1C3-4EE4-9B50-A58C43B9BAB7}"
 EndProject
