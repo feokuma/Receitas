@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receitas.Testes.Integracao"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receitas.Testes.Unidade", "testes\Receitas.Testes.Unidade\Receitas.Testes.Unidade.csproj", "{E7F44503-5062-4806-8FBF-6B33ECA55F5C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "arquivos", "arquivos", "{86AEDA8A-9ABF-469A-B60D-97A9C5638BC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
