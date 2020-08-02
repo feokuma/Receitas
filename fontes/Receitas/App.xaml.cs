@@ -22,7 +22,7 @@ namespace Receitas
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync($"NavigationPage/{nameof(TelaPrincipal)}");
+            await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(TelaPrincipal)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)

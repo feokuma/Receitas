@@ -13,7 +13,7 @@ namespace Receitas.iOS
     // User Interface of the application, as well as listening (and optionally responding) to 
     // application events from iOS.
     [Register("AppDelegate")]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate, IPlatformInitializer
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate 
     {
         //
         // This method is invoked when the application has loaded and is ready to run. In this 
@@ -25,14 +25,16 @@ namespace Receitas.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App(this));
+            LoadApplication(new App(new IOSInitializer()));
 
             return base.FinishedLaunching(app, options);
         }
+    }
 
+    public class IOSInitializer : IPlatformInitializer
+    {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-
         }
     }
 }
