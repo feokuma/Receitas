@@ -4,8 +4,15 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="Receitas.Views.TelaPrincipal">
     <ContentPage.Content>
-        <Label Text="Tela principal do app"
-               VerticalOptions="CenterAndExpand"
-               HorizontalOptions="CenterAndExpand" />
+        <StackLayout>
+            <Label Text="{Binding TextoPrincipal}"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="CenterAndExpand" />
+            <CheckBox VerticalOptions="Start"
+                      IsChecked="{Binding EstáSelecionado}" />
+            <Button Text="Botão de teste"
+                    VerticalOptions="Start"
+                    Command="{Binding BotãoCommand}" />
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
