@@ -5,6 +5,7 @@ using Receitas.ViewModels;
 using Receitas.Views;
 using Xamarin.Forms;
 
+[assembly: ExportFont("fontello.ttf", Alias = "fontello")]
 namespace Receitas
 {
     public partial class App : PrismApplication
