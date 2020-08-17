@@ -18,13 +18,14 @@ namespace Receitas
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(TelaPrincipal)}");
+            await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(TelaPrincipalPage)}?selectedTab={nameof(ExplorarPageView)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
-            containerRegistry.RegisterForNavigation<TelaPrincipal, TelaPrincipalViewModel>();
+            containerRegistry.RegisterForNavigation<TelaPrincipalPage, TelaPrincipalViewModel>();
+            containerRegistry.RegisterForNavigation<ReceitaPageView, ReceitaPageViewModel>();
         }
     }
 }

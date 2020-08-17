@@ -23,8 +23,22 @@
     <PackageReference Include="Prism.DryIoc.Forms" Version="7.2.0.1422" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Views\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Views\ExplorarPageView.xaml.cs">
+      <DependentUpon>ExplorarPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\TelaPrincipalPage.xaml.cs">
+      <DependentUpon>TelaPrincipalPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Views\FavoritosPageView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ReceitaPageView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

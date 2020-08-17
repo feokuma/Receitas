@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace Receitas.Views
 {
-    public partial class TelaPrincipal : ContentPage
+    public partial class TelaPrincipalPage : TabbedPage
     {
-        public TelaPrincipal()
+        public TelaPrincipalPage()
         {
             InitializeComponent();
         }

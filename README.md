@@ -5,6 +5,7 @@ App para criar e organizar receitas
 - Xamarin Forms 4.8
 - Prism
 - NUnit
+- Fontello
 
 ## Referências 
 - https://dribbble.com/shots/3980969-Recipe-App-Explore-recipes

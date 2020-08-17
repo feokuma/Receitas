@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="Receitas.Views.ExplorarPageView"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fontIcons="clr-namespace:Receitas.Resourses"
+             NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <FlexLayout Margin="10,10,10,0"
+                    Direction="Column">
+            <Label FontAttributes="Bold"
+                   FontSize="Title"
+                   Text="Receitas" />
+            <StackLayout>
+                <FlexLayout Direction="Row">
+                    <Label FlexLayout.AlignSelf="Center"
+                           FontFamily="fontello"
+                           FontSize="Title"
+                           Text="{x:Static fontIcons:FontIcons.Configuração}"
+                           TextColor="Green">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ConfiguraçãoCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <SearchBar FlexLayout.Grow="1"
+                               Placeholder="Procurar receitas"
+                               VerticalOptions="Center" />
+                </FlexLayout>
+            </StackLayout>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>
