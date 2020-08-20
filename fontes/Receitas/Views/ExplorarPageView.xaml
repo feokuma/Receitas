@@ -2,7 +2,7 @@
 <ContentPage x:Class="Receitas.Views.ExplorarPageView"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:contentViews="clr-namespace:Receitas.Views"
+             xmlns:contentViews="clr-namespace:Receitas.ContentViews"
              xmlns:fontIcons="clr-namespace:Receitas.Resourses"
              BackgroundColor="#ebebeb"
              NavigationPage.HasNavigationBar="True">
@@ -12,7 +12,7 @@
                    FontAttributes="Bold"
                    FontSize="Title"
                    Text="Receitas" />
-            <FlexLayout Margin="10,0"
+            <FlexLayout Margin="10,0,10,10"
                         Direction="Row"
                         FlexLayout.Grow="1">
                 <Label FlexLayout.AlignSelf="Center"
@@ -30,7 +30,7 @@
                                VerticalOptions="Center" />
                 </Frame>
             </FlexLayout>
-            <Frame Margin="0,10">
+            <Frame Margin="0" Padding="15">
                 <FlexLayout BackgroundColor="White"
                             Direction="Row"
                             JustifyContent="SpaceAround">

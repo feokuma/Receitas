@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Receitas.Views
+namespace Receitas.ContentViews
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ListaFavoritosView : ContentView
+    public partial class ListaReceitasView : ContentView
     {
-        public ListaFavoritosView()
+        public ListaReceitasView()
         {
             InitializeComponent();
         }

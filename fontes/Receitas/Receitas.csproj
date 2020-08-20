@@ -29,7 +29,7 @@
     <Compile Update="Views\ExplorarPageView.xaml.cs">
       <DependentUpon>ExplorarPageView.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\ListaFavoritosView.xaml.cs">
+    <Compile Update="ContentViews\ListaFavoritosView.xaml.cs">
       <DependentUpon>ListaFavoritosView.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\TelaPrincipalPage.xaml.cs">
@@ -40,7 +40,7 @@
     <EmbeddedResource Update="Views\FavoritosPageView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\ListaFavoritosView.xaml">
+    <EmbeddedResource Update="ContentViews\ListaFavoritosView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ReceitaPageView.xaml">
