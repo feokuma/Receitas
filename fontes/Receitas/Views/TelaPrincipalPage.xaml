@@ -6,7 +6,7 @@
             xmlns:fontIcons="clr-namespace:Receitas.Resourses"
             xmlns:local="clr-namespace:Receitas.Views"
             android:TabbedPage.ToolbarPlacement="Bottom"
-            NavigationPage.HasNavigationBar="False" >
+            NavigationPage.HasNavigationBar="False">
     <local:ExplorarPageView Title="Explorar" />
     <local:FavoritosPageView Title="Favoritos" />
 </TabbedPage>

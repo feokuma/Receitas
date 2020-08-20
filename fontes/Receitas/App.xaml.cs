@@ -17,6 +17,7 @@ namespace Receitas
         protected override async void OnInitialized()
         {
             InitializeComponent();
+            Device.SetFlags(new string[] { "Shapes_Experimental", "CarouselView_Experimental" });
 
             await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(TelaPrincipalPage)}?selectedTab={nameof(ExplorarPageView)}");
         }
