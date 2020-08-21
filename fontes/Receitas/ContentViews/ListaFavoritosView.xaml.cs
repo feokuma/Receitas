@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Receitas.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Receitas.ContentViews
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListaFavoritosView : ContentView
     {
+
+
         public ListaFavoritosView()
         {
             InitializeComponent();

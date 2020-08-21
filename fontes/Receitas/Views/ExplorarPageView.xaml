@@ -24,7 +24,10 @@
                         <TapGestureRecognizer Command="{Binding ConfiguraçãoCommand}" />
                     </Label.GestureRecognizers>
                 </Label>
-                <Frame Margin="20,0,0,0" Padding="0" IsClippedToBounds="True" FlexLayout.Grow="1">
+                <Frame Margin="20,0,0,0"
+                       Padding="0"
+                       FlexLayout.Grow="1"
+                       IsClippedToBounds="True">
                     <SearchBar BackgroundColor="White"
                                Placeholder="Procurar receitas"
                                VerticalOptions="Center" />
@@ -45,7 +48,7 @@
             <CarouselView>
                 <CarouselView.ItemsSource>
                     <x:Array Type="{x:Type ContentView}">
-                        <contentViews:ListaReceitasView />
+                        <contentViews:ListaReceitasView ListaReceitas="{Binding Receitas}" Margin="5, 0"/>
                         <contentViews:ListaFavoritosView />
                     </x:Array>
                 </CarouselView.ItemsSource>

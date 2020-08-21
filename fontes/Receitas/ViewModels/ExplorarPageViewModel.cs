@@ -1,6 +1,7 @@
 ﻿using Prism;
 using Prism.Mvvm;
 using Prism.Navigation;
+using Receitas.Models;
 using Receitas.Views;
 using System;
 using System.Collections.Generic;
@@ -11,12 +12,14 @@ using Xamarin.Forms;
 
 namespace Receitas.ViewModels
 {
-    public class ExplorarPageViewModel : BindableBase, IActiveAware
+    public class ExplorarPageViewModel : BindableBase, IActiveAware, INavigatedAware 
     {
         public event EventHandler IsActiveChanged;
 
         public INavigationService _navigationService { get; }
         public ICommand ConfiguraçãoCommand { get; set; }
+
+        public IList<Receita> Receitas { get; set; }
 
         public ExplorarPageViewModel(INavigationService navigationService)
         {
@@ -40,6 +43,38 @@ namespace Receitas.ViewModels
         protected virtual void RaiseIsActiveChanged()
         {
             IsActiveChanged?.Invoke(this, EventArgs.Empty);
+        }
+
+        public void OnNavigatedFrom(INavigationParameters parameters)
+        {
+        }
+
+        public void OnNavigatedTo(INavigationParameters parameters)
+        {
+            Receitas = new List<Receita>
+            {
+                new Receita
+                {
+                    Nome = "Esfirra Fechada",
+                    Descrição = "Esfirra de carne fechada",
+                    Imagem = "cooking_book.png"
+                },
+                new Receita
+                {
+                    Nome = "Empada de Frango",
+                    Descrição = "Empada de frango pequena",
+                    Imagem = "cooking_book.png"
+                },
+                new Receita
+                {
+                    Nome = "Torta de Palmito",
+                    Descrição = "Torta de palmito com alecrim",
+                    Imagem = "cooking_book.png"
+                }
+            };
+            RaisePropertyChanged(nameof(Receitas));
+
+
         }
     }
 }
