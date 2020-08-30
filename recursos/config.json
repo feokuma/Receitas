@@ -11,6 +11,12 @@
       "css": "params",
       "code": 59392,
       "src": "linecons"
+    },
+    {
+      "uid": "aa991e8e66ac54b33f0a4b0555597b08",
+      "css": "barcode",
+      "code": 59393,
+      "src": "fontawesome"
     }
   ]
 }

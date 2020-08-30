@@ -26,6 +26,7 @@ namespace Receitas
         {
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<TelaPrincipalPage, TelaPrincipalViewModel>();
+            containerRegistry.RegisterForNavigation<ExplorarPageView, ExplorarPageViewModel>();
             containerRegistry.RegisterForNavigation<ReceitaPageView, ReceitaPageViewModel>();
         }
     }

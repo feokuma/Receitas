@@ -2,62 +2,82 @@
 <ContentPage x:Class="Receitas.Views.ExplorarPageView"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:contentViews="clr-namespace:Receitas.ContentViews"
+             xmlns:controles="clr-namespace:Receitas.CustomRenderers"
              xmlns:fontIcons="clr-namespace:Receitas.Resourses"
-             BackgroundColor="#ebebeb"
+             x:Name="ExplorerPage"
+             BackgroundColor="{StaticResource AppBackgroundColor}"
              NavigationPage.HasNavigationBar="True">
     <ContentPage.Content>
         <StackLayout>
-            <Label Margin="10,10"
-                   FontAttributes="Bold"
-                   FontSize="Title"
-                   Text="Receitas" />
-            <FlexLayout Margin="10,0,10,10"
-                        Direction="Row"
-                        FlexLayout.Grow="1">
-                <Label FlexLayout.AlignSelf="Center"
-                       FontFamily="fontello"
-                       FontSize="Title"
-                       Text="{x:Static fontIcons:FontIcons.Configuração}"
-                       TextColor="Green">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Command="{Binding ConfiguraçãoCommand}" />
-                    </Label.GestureRecognizers>
-                </Label>
-                <Frame Margin="20,0,0,0"
-                       Padding="0"
-                       FlexLayout.Grow="1"
-                       IsClippedToBounds="True">
-                    <SearchBar BackgroundColor="White"
-                               Placeholder="Procurar receitas"
-                               VerticalOptions="Center" />
-                </Frame>
-            </FlexLayout>
-            <Frame Margin="0" Padding="15">
-                <FlexLayout BackgroundColor="White"
+            <StackLayout Margin="20,10">
+                <FlexLayout AlignContent="Center"
                             Direction="Row"
-                            JustifyContent="SpaceAround">
-                    <StackLayout>
-                        <Label HorizontalOptions="CenterAndExpand" Text="Explorar" />
-                        <BoxView BackgroundColor="Green" HeightRequest="2" />
-                    </StackLayout>
-                    <Label HorizontalOptions="CenterAndExpand" Text="Preparar agora" />
-                    <Label HorizontalOptions="CenterAndExpand" Text="Favoritos" />
+                            JustifyContent="SpaceBetween">
+                    <Label FontAttributes="Bold"
+                           FontSize="Title"
+                           Text="Receitas"
+                           TextColor="Black" />
+                    <Label FlexLayout.AlignSelf="Center"
+                           FontFamily="fontello"
+                           FontSize="Title"
+                           Text="{x:Static fontIcons:FontIcons.CódigoBarras}"
+                           TextColor="{StaticResource NavigationBarColor}" />
                 </FlexLayout>
-            </Frame>
-            <CarouselView>
-                <CarouselView.ItemsSource>
-                    <x:Array Type="{x:Type ContentView}">
-                        <contentViews:ListaReceitasView ListaReceitas="{Binding Receitas}" Margin="5, 0"/>
-                        <contentViews:ListaFavoritosView />
-                    </x:Array>
-                </CarouselView.ItemsSource>
-                <CarouselView.ItemTemplate>
-                    <DataTemplate>
-                        <ContentView Content="{Binding .}" />
-                    </DataTemplate>
-                </CarouselView.ItemTemplate>
-            </CarouselView>
+                <FlexLayout Direction="Row" FlexLayout.Grow="1">
+                    <Label FlexLayout.AlignSelf="Center"
+                           FontFamily="fontello"
+                           FontSize="Title"
+                           Text="{x:Static fontIcons:FontIcons.Configuração}"
+                           TextColor="{StaticResource NavigationBarColor}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ConfiguraçãoCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Frame Margin="20,0,0,0"
+                           Padding="0"
+                           CornerRadius="5"
+                           FlexLayout.Grow="1"
+                           IsClippedToBounds="True">
+                        <controles:CustomSearchBar BackgroundColor="White"
+                                                   Placeholder="Procurar receitas"
+                                                   VerticalOptions="Center" />
+                    </Frame>
+                </FlexLayout>
+            </StackLayout>
+            <Grid ColumnDefinitions="*, *, *"
+                  ColumnSpacing="0"
+                  HeightRequest="100">
+                <FlexLayout Grid.Column="0"
+                            BackgroundColor="White"
+                            Direction="Column">
+                    <Label FlexLayout.Grow="1"
+                           HorizontalTextAlignment="Center"
+                           Text="Explorar"
+                           FontAttributes="Bold"
+                           FontSize="Subtitle"
+                           VerticalTextAlignment="Center" />
+                    <BoxView HeightRequest="2" Color="{StaticResource NavigationBarColor}"/>
+                </FlexLayout>
+                <FlexLayout Grid.Column="1"
+                            BackgroundColor="White"
+                            Direction="Column">
+                    <Label FlexLayout.Grow="1"
+                           HorizontalTextAlignment="Center"
+                           Text="Cozinhar Agora"
+                           VerticalTextAlignment="Center" />
+                    <BoxView HeightRequest="2" />
+                </FlexLayout>
+                <FlexLayout Grid.Column="2"
+                            BackgroundColor="White"
+                            Direction="Column">
+                    <Label FlexLayout.Grow="1"
+                           HorizontalTextAlignment="Center"
+                           Text="Favoritos"
+                           VerticalTextAlignment="Center" />
+                    <BoxView HeightRequest="2" />
+                </FlexLayout>
+            </Grid>
+            <CarouselView x:Name="carouselView" />
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

@@ -7,5 +7,6 @@ namespace Receitas.Resourses
     public static class FontIcons
     {
         public const string Configuração = "\uE800";
+        public const string CódigoBarras = "\uE801";
     }
 }

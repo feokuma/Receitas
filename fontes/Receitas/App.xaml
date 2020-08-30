@@ -5,5 +5,18 @@
                         xmlns:prism="http://prismlibrary.com">
     <Application.Resources>
         <!--  Application resource dictionary  -->
+        <!-- Colors -->
+        <Color x:Key="AppBackgroundColor">#ebebeb</Color>
+        <Color x:Key="NavigationBarColor">#05C663</Color>
+        <Color x:Key="NavigationBarTextColor">White</Color>
+        <Color x:Key="NormalTextColor">Black</Color>
+
+        <!-- Implicit styles -->
+        <Style TargetType="{x:Type NavigationPage}">
+            <Setter Property="BarBackgroundColor"
+                    Value="{StaticResource NavigationBarColor}" />
+            <Setter Property="BarTextColor"
+                    Value="{StaticResource NavigationBarTextColor}" />
+        </Style>
     </Application.Resources>
 </prism:PrismApplication>

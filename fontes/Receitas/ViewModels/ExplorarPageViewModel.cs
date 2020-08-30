@@ -1,11 +1,11 @@
-﻿using Prism;
+﻿using MvvmHelpers;
+using Prism;
 using Prism.Mvvm;
 using Prism.Navigation;
 using Receitas.Models;
 using Receitas.Views;
 using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -14,12 +14,13 @@ namespace Receitas.ViewModels
 {
     public class ExplorarPageViewModel : BindableBase, IActiveAware, INavigatedAware 
     {
+        public string TextoDaLista { get; set; }
         public event EventHandler IsActiveChanged;
 
         public INavigationService _navigationService { get; }
         public ICommand ConfiguraçãoCommand { get; set; }
 
-        public IList<Receita> Receitas { get; set; }
+        public ObservableCollection<Receita> Receitas { get; set; }
 
         public ExplorarPageViewModel(INavigationService navigationService)
         {
@@ -51,7 +52,7 @@ namespace Receitas.ViewModels
 
         public void OnNavigatedTo(INavigationParameters parameters)
         {
-            Receitas = new List<Receita>
+            Receitas = new ObservableCollection<Receita>
             {
                 new Receita
                 {
@@ -73,8 +74,7 @@ namespace Receitas.ViewModels
                 }
             };
             RaisePropertyChanged(nameof(Receitas));
-
-
+            TextoDaLista = "Teste";
         }
     }
 }
