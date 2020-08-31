@@ -7,6 +7,14 @@
              x:Name="ExplorerPage"
              BackgroundColor="{StaticResource AppBackgroundColor}"
              NavigationPage.HasNavigationBar="True">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="TabLabelStyle" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
             <StackLayout Margin="20,10">
@@ -44,38 +52,44 @@
                     </Frame>
                 </FlexLayout>
             </StackLayout>
-            <Grid ColumnDefinitions="*, *, *"
+            <Grid BackgroundColor="White"
+                  ColumnDefinitions="*, *, *"
                   ColumnSpacing="0"
-                  HeightRequest="100">
-                <FlexLayout Grid.Column="0"
-                            BackgroundColor="White"
-                            Direction="Column">
-                    <Label FlexLayout.Grow="1"
-                           HorizontalTextAlignment="Center"
-                           Text="Explorar"
-                           FontAttributes="Bold"
-                           FontSize="Subtitle"
-                           VerticalTextAlignment="Center" />
-                    <BoxView HeightRequest="2" Color="{StaticResource NavigationBarColor}"/>
-                </FlexLayout>
-                <FlexLayout Grid.Column="1"
-                            BackgroundColor="White"
-                            Direction="Column">
-                    <Label FlexLayout.Grow="1"
-                           HorizontalTextAlignment="Center"
-                           Text="Cozinhar Agora"
-                           VerticalTextAlignment="Center" />
-                    <BoxView HeightRequest="2" />
-                </FlexLayout>
-                <FlexLayout Grid.Column="2"
-                            BackgroundColor="White"
-                            Direction="Column">
-                    <Label FlexLayout.Grow="1"
-                           HorizontalTextAlignment="Center"
-                           Text="Favoritos"
-                           VerticalTextAlignment="Center" />
-                    <BoxView HeightRequest="2" />
-                </FlexLayout>
+                  HeightRequest="90">
+                <Label x:Name="labelTabExplorar"
+                       Grid.Column="0"
+                       FontAttributes="Bold"
+                       FontSize="Subtitle"
+                       Style="{x:StaticResource TabLabelStyle}"
+                       Text="Explorar">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="labelTabCozinharAgora"
+                       Grid.Column="1"
+                       Style="{x:StaticResource TabLabelStyle}"
+                       Text="Cozinhar Agora">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <Label x:Name="labelTabFavoritos"
+                       Grid.Column="2"
+                       Style="{x:StaticResource TabLabelStyle}"
+                       Text="Favoritos">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Label.GestureRecognizers>
+                </Label>
+                <BoxView Grid.ColumnSpan="3"
+                         HeightRequest="2"
+                         VerticalOptions="End"
+                         Color="LightGray" />
+                <BoxView x:Name="marcadorSeleção"
+                         HeightRequest="3"
+                         VerticalOptions="End"
+                         Color="{StaticResource NavigationBarColor}" />
             </Grid>
             <CarouselView x:Name="carouselView" />
         </StackLayout>
