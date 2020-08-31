@@ -9,9 +9,17 @@
              NavigationPage.HasNavigationBar="True">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="TabLabelStyle" TargetType="Label">
+            <Style x:Key="TabLabelNormalStyle" TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Center" />
                 <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontAttributes" Value="None" />
+                <Setter Property="FontSize" Value="Default"/>
+            </Style>
+            <Style x:Key="TabLabelSelecionadoStyle" TargetType="Label">
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="VerticalTextAlignment" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontSize" Value="Subtitle"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -58,9 +66,7 @@
                   HeightRequest="90">
                 <Label x:Name="labelTabExplorar"
                        Grid.Column="0"
-                       FontAttributes="Bold"
-                       FontSize="Subtitle"
-                       Style="{x:StaticResource TabLabelStyle}"
+                       Style="{x:StaticResource TabLabelSelecionadoStyle}"
                        Text="Explorar">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
@@ -68,7 +74,7 @@
                 </Label>
                 <Label x:Name="labelTabCozinharAgora"
                        Grid.Column="1"
-                       Style="{x:StaticResource TabLabelStyle}"
+                       Style="{x:StaticResource TabLabelNormalStyle}"
                        Text="Cozinhar Agora">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
@@ -76,7 +82,7 @@
                 </Label>
                 <Label x:Name="labelTabFavoritos"
                        Grid.Column="2"
-                       Style="{x:StaticResource TabLabelStyle}"
+                       Style="{x:StaticResource TabLabelNormalStyle}"
                        Text="Favoritos">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />

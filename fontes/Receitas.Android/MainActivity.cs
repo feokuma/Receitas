@@ -22,7 +22,7 @@ namespace Receitas.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            SetStatusBarColor(System.Drawing.Color.FromArgb(0xeb, 0xeb, 0xeb), false);
+            SetStatusBarColor(System.Drawing.Color.FromArgb(0x05, 0xc6, 0x63), false);
             LoadApplication(new App(new AndroidInitializer()));
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)

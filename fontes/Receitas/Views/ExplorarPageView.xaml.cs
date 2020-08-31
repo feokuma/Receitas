@@ -38,10 +38,13 @@ namespace Receitas.Views
             if (index == TabSelecionada)
                 return;
 
-            TabLabels[TabSelecionada].FontAttributes = FontAttributes.None;
+            var styleNormal = (Style)Resources["TabLabelNormalStyle"];
+            var styleSelecionado = (Style)Resources["TabLabelSelecionadoStyle"];
+
+            TabLabels[TabSelecionada].Style = styleNormal;
             var tabLabelSelecionada = TabLabels[index];
             _ = await marcadorSeleção.TranslateTo(tabLabelSelecionada.X, 0, 100, Easing.SinInOut);
-            tabLabelSelecionada.FontAttributes = FontAttributes.Bold;
+            tabLabelSelecionada.Style = styleSelecionado;
             TabSelecionada = index;
         }
     }
