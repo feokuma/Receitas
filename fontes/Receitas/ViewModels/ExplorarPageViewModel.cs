@@ -12,69 +12,34 @@ using Xamarin.Forms;
 
 namespace Receitas.ViewModels
 {
-    public class ExplorarPageViewModel : BindableBase, IActiveAware, INavigatedAware 
+    public class ExplorarPageViewModel : BindableBase  
     {
-        public string TextoDaLista { get; set; }
-        public event EventHandler IsActiveChanged;
-
-        public INavigationService _navigationService { get; }
-        public ICommand ConfiguraçãoCommand { get; set; }
-
-        public ObservableCollection<Receita> Receitas { get; set; }
-
+        public ObservableCollection<Categoria> Categorias { get; set; }
         public ExplorarPageViewModel(INavigationService navigationService)
         {
-            ConfiguraçãoCommand = new Command(async () => await Configuração());
-            _navigationService = navigationService;
-        }
-
-        private async Task Configuração()
-        {
-            await _navigationService.NavigateAsync($"{nameof(ReceitaPageView)}");
-        }
-
-        private bool _isActive;
-        public bool IsActive
-        {
-            get { return _isActive; }
-            set { SetProperty(ref _isActive, value, RaiseIsActiveChanged); }
-        }
-
-
-        protected virtual void RaiseIsActiveChanged()
-        {
-            IsActiveChanged?.Invoke(this, EventArgs.Empty);
-        }
-
-        public void OnNavigatedFrom(INavigationParameters parameters)
-        {
-        }
-
-        public void OnNavigatedTo(INavigationParameters parameters)
-        {
-            Receitas = new ObservableCollection<Receita>
+            Categorias = new ObservableCollection<Categoria>
             {
-                new Receita
+                new Categoria
                 {
-                    Nome = "Esfirra Fechada",
-                    Descrição = "Esfirra de carne fechada",
-                    Imagem = "cooking_book.png"
+                    Nome = "Massa",
+                    Imagem = "pasta.png"
                 },
-                new Receita
+                new Categoria
                 {
-                    Nome = "Empada de Frango",
-                    Descrição = "Empada de frango pequena",
-                    Imagem = "cooking_book.png"
+                    Nome = "Frutos do Mar",
+                    Imagem = "seafood.png"
                 },
-                new Receita
+                new Categoria
                 {
-                    Nome = "Torta de Palmito",
-                    Descrição = "Torta de palmito com alecrim",
-                    Imagem = "cooking_book.png"
+                    Nome = "Saladas",
+                    Imagem = "salad.png"
+                },
+                new Categoria
+                {
+                    Nome = "Ovos",
+                    Imagem = "eggs.png"
                 }
             };
-            RaisePropertyChanged(nameof(Receitas));
-            TextoDaLista = "Teste";
         }
     }
 }

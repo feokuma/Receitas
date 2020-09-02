@@ -146,4 +146,76 @@
       <Name>Receitas</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eggs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eggs%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\eggs%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pasta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pasta%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pasta%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\salad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\salad%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\salad%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\seafood.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\seafood%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\seafood%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chinese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chinese%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\chinese%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\japanese.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\japanese%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\japanese%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\heart%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\heart%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ceaser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ceaser%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ceaser%403x.png" />
+  </ItemGroup>
 </Project>
